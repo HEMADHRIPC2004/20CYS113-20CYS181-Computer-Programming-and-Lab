@@ -1,0 +1,33 @@
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+    int h,u,i;
+    scanf("%d",&u);
+    while(u>0){
+            scanf("%d",&h);
+    if (calc(h)==1)
+        printf("Yes\n");
+    else
+        printf("No\n");
+        u=u-1;
+    }
+    
+}
+
+int calc(n){
+    int x=0, a=n;
+    while (a>0) {
+        x=x+pow((a%10),3);
+        a=a/10;
+    }
+    if (x==n) {
+        return 1;
+    }
+    else {
+        return 0;
+    }
+}
+
+
+

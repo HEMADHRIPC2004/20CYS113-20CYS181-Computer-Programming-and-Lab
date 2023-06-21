@@ -1,0 +1,18 @@
+#include<stdio.h>
+int main(){
+    char vowels[10]={'A','E','I','O','U','a','e','i','o','u'};
+    char a;
+    scanf("%c",&a);
+    int i=0;
+    while(i<10){
+        if(a == vowels[i]){
+            printf("Vowel.");
+            exit(0);
+        }
+        else{
+            i++;
+        }
+    }
+    printf("Consonant.");
+    return 0;
+}

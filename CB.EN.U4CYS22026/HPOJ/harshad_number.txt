@@ -1,0 +1,39 @@
+#include <stdio.h>
+#include <math.h>
+int main(){
+    int a,k;
+    scanf("%d",&a);
+    k=isHarshad(a);
+    if(k==0){
+        printf("%d is not a Harshad number.",a);
+    }
+    else if(k==1){
+        printf("%d is a Harshad number.",a);
+    }
+    else if(k==3){
+        printf("Number should be greater than 0.");
+    }
+}
+int isHarshad(int a){
+    if (a<= 0){
+        return 3;
+    }
+    else{
+        int k,i,t=0,it=a;
+        k=log10(a)+1;
+        int val[k];
+        for(i=0;i<k;i++){
+            val[i]=a%10;
+            a=a/10;
+        }
+        for(i=0;i<k;i++){
+            t=t+val[i];
+        }
+        if(it%t==0){
+            return 1;
+        }
+        else if(it%t!=0){
+            return 0;
+        } 
+    }
+}
